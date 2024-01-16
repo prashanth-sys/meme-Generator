@@ -47,7 +47,7 @@ export const GenreatorButton = styled.button`
 
 export const GeneratedMeme = styled.div`
   margin-top: 20px;
-  background-image: ${props => `url(${props.image})`};
+  background-image: ${props => (props.image ? `url(${props.image})` : 'none')};
   padding: 20px;
   border-radius: 5px;
   display: flex;

@@ -75,12 +75,15 @@ class MemeGenerator extends Component {
         </div>
       </GeneratedMeme>
     )
-    this.setState({generatedMeme})
+    this.setState({
+      generatedMeme,
+      image: 'https://assets.ccbp.in/frontend/react-js/nature-img.png',
+    })
   }
 
-  onImage = () => {
+  onImage = event => {
     this.setState({
-      image: 'https://assets.ccbp.in/frontend/react-js/nature-img.png',
+      image: event.target.value,
     })
   }
 
